@@ -1,1 +1,24 @@
-# nurturelink
+ NurtureLink Mind Wellness Website
+
+A bilingual (Sinhala/English) website for child mental, behavioral, and educational development center.
+
+## 🌟 Features
+
+- ✅ Bilingual Support (Sinhala & English toggle)
+- ✅ Responsive Design (Mobile, Tablet, Desktop)
+- ✅ Appointment Booking System
+- ✅ WhatsApp Integration
+- ✅ Blog/Resources Section
+- ✅ Testimonials Slider
+- ✅ Contact Form with Google Maps
+- ✅ Beautiful Animations
+
+## 🚀 Quick Start
+
+### Option 1: Static Hosting (GitHub Pages)
+Just open `index.html` in your browser!
+
+### Option 2: With Node.js Backend
+```bash
+npm install
+npm start
