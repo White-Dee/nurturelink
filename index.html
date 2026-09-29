@@ -1,555 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NurtureLink Mind Wellness - Child Mental, Behavioral & Educational Development Center">
-    <title>NurtureLink Mind Wellness</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nurturelink Mind Wellness — child development therapy and parent support." />
+  <title>Nurturelink Mind Wellness</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <img src="images/logo.jpg" alt="Loading..." class="loader-logo">
-            <div class="loader-spinner"></div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="images/logo.jpg" alt="NurtureLink Mind Wellness Logo">
-                <div class="logo-text">
-                    <span class="logo-name">NurtureLink</span>
-                    <span class="logo-tagline">Mind Wellness</span>
-                </div>
-            </a>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a></li>
-                <li><a href="#about" class="nav-link" data-si="අප ගැන" data-en="About Us">අප ගැන</a></li>
-                <li><a href="#services" class="nav-link" data-si="සේවා" data-en="Services">සේවා</a></li>
-                <li><a href="#blog" class="nav-link" data-si="මාර්ගෝපදේශ" data-en="Resources">මාර්ගෝපදේශ</a></li>
-                <li><a href="#testimonials" class="nav-link" data-si="අදහස්" data-en="Testimonials">අදහස්</a></li>
-                <li><a href="#contact" class="nav-link" data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</a></li>
-            </ul>
-
-            <!-- Language Toggle -->
-            <div class="lang-toggle">
-                <button class="lang-btn active" id="btnSi" onclick="setLanguage('si')">සිං</button>
-                <span class="lang-divider">|</span>
-                <button class="lang-btn" id="btnEn" onclick="setLanguage('en')">EN</button>
-            </div>
-
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ========== HOME SECTION ========== -->
-    <section id="home" class="hero-section">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge" data-si="🌻 ඔබේ දරුවාගේ සුබ අනාගතය වෙනුවෙන්" data-en="🌻 For Your Child's Bright Future">
-                    🌻 ඔබේ දරුවාගේ සුබ අනාගතය වෙනුවෙන්
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line" data-si="ඔබේ දරුවාගේ" data-en="Does Your Child Have">ඔබේ දරුවාගේ</span>
-                    <span class="title-highlight" data-si="මානසික, චර්යාත්මක හෝ" data-en="Mental, Behavioral or">මානසික, චර්යාත්මක හෝ</span>
-                    <span class="title-line" data-si="අධ්‍යාපනික වර්ධනය පිළිබඳව" data-en="Educational Development">අධ්‍යාපනික වර්ධනය පිළිබඳව</span>
-                    <span class="title-line" data-si="ඔබට ගැටලු තිබේද?" data-en="Concerns?">ඔබට ගැටලු තිබේද?</span>
-                </h1>
-                <p class="hero-description" data-si="NurtureLink Mind Wellness හිදී අපි ඔබේ දරුවාට විශේෂිත, පුද්ගලාරෝපිත චිකිත්සක සේවාවන් ලබා දෙමු. වසර 12කට අධික පළපුරුද්දක් සහිත අපගේ විශේෂඥ කණ්ඩායම සමඟ ඔබේ දරුවාගේ සම්පූර්ණ හැකියාව අගුළු හරින්න." data-en="At NurtureLink Mind Wellness, we provide specialized, personalized therapeutic services for your child. Unlock your child's full potential with our expert team with over 12 years of experience.">
-                    NurtureLink Mind Wellness හිදී අපි ඔබේ දරුවාට විශේෂිත, පුද්ගලාරෝපිත චිකිත්සක සේවාවන් ලබා දෙමු. වසර 12කට අධික පළපුරුද්දක් සහිත අපගේ විශේෂඥ කණ්ඩායම සමඟ ඔබේ දරුවාගේ සම්පූර්ණ හැකියාව අගුළු හරින්න.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary btn-lg pulse-btn" onclick="openAppointmentModal()" data-si="📅 හමුවීමක් වෙන්කරවා ගන්න" data-en="📅 Book an Appointment">
-                        📅 හමුවීමක් වෙන්කරවා ගන්න
-                    </button>
-                    <a href="#services" class="btn btn-outline btn-lg" data-si="🔍 සේවා බලන්න" data-en="🔍 View Services">
-                        🔍 සේවා බලන්න
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="12">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label" data-si="වසර පළපුරුද්ද" data-en="Years Experience">වසර පළපුරුද්ද</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label" data-si="සතුටු දරුවන්" data-en="Happy Children">සතුටු දරුවන්</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="4">0</span>
-                        <span class="stat-label" data-si="විශේෂඥ සේවා" data-en="Expert Services">විශේෂඥ සේවා</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-img-wrapper">
-                    <img src="images/logo.jpg" alt="NurtureLink Mind Wellness" class="hero-logo-img">
-                    <div class="hero-img-ring"></div>
-                    <div class="hero-img-ring ring-2"></div>
-                    <div class="floating-icon fi-1"><i class="fas fa-heart"></i></div>
-                    <div class="floating-icon fi-2"><i class="fas fa-star"></i></div>
-                    <div class="floating-icon fi-3"><i class="fas fa-brain"></i></div>
-                    <div class="floating-icon fi-4"><i class="fas fa-hands-holding-child"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,40 C360,120 1080,0 1440,80 L1440,120 L0,120 Z" fill="#ffffff"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- ========== ABOUT SECTION ========== -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-si="අප ගැන" data-en="About Us">අප ගැන</span>
-                <h2 class="section-title" data-si="අපව හඳුනා ගන්න" data-en="Get to Know Us">අපව හඳුනා ගන්න</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-image-col">
-                    <div class="about-image-wrapper">
-                        <div class="about-img-card">
-                            <img src="images/logo.jpg" alt="NurtureLink Mind Wellness" class="about-main-img">
-                        </div>
-                        <div class="about-experience-badge">
-                            <span class="exp-number">12+</span>
-                            <span class="exp-text" data-si="වසර පළපුරුද්ද" data-en="Years Experience">වසර<br>පළපුරුද්ද</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-content-col">
-                    <h3 class="about-subtitle" data-si="W. චතුරිකා විරාජිනී" data-en="W. Chathurika Virajini">W. චතුරිකා විරාජිනී</h3>
-                    <p class="about-role" data-si="ප්‍රධාන චිකිත්සක / නිර්මාතෘ" data-en="Lead Therapist / Founder">ප්‍රධාන චිකිත්සක / නිර්මාතෘ</p>
-                    <p class="about-text" data-si="W. චතුරිකා විරාජිනී මහත්මිය වසර 12කට අධික කාලයක් තිස්සේ දරුවන්ගේ මානසික, චර්යාත්මක සහ අධ්‍යාපනික වර්ධනය සඳහා කැපවී සේවය කර ඇත. ඇයගේ විශේෂඥ දැනුම සහ අත්දැකීම් මත පදනම්ව NurtureLink Mind Wellness ආයතනය ස්ථාපිත කරන ලදී." data-en="Ms. W. Chathurika Virajini has been dedicated to serving children's mental, behavioral, and educational development for over 12 years. NurtureLink Mind Wellness was established based on her expert knowledge and experience.">
-                        W. චතුරිකා විරාජිනී මහත්මිය වසර 12කට අධික කාලයක් තිස්සේ දරුවන්ගේ මානසික, චර්යාත්මක සහ අධ්‍යාපනික වර්ධනය සඳහා කැපවී සේවය කර ඇත. ඇයගේ විශේෂඥ දැනුම සහ අත්දැකීම් මත පදනම්ව NurtureLink Mind Wellness ආයතනය ස්ථාපිත කරන ලදී.
-                    </p>
-                    <p class="about-text" data-si="අපගේ ප්‍රධාන අරමුණ වන්නේ සෑම දරුවෙකුටම ඔවුන්ගේ සම්පූර්ණ හැකියාව ළඟා කර ගැනීමට උපකාරී වන ආරක්ෂිත, සහය දක්වන පරිසරයක් සැපයීමයි. අපි එක් එක් දරුවාගේ අනන්‍ය අවශ්‍යතාවන්ට අනුව පුද්ගලාරෝපිත ප්‍රතිකාර සැලසුම් සකස් කරමු." data-en="Our main goal is to provide a safe, supportive environment that helps every child reach their full potential. We create personalized treatment plans tailored to each child's unique needs.">
-                        අපගේ ප්‍රධාන අරමුණ වන්නේ සෑම දරුවෙකුටම ඔවුන්ගේ සම්පූර්ණ හැකියාව ළඟා කර ගැනීමට උපකාරී වන ආරක්ෂිත, සහය දක්වන පරිසරයක් සැපයීමයි. අපි එක් එක් දරුවාගේ අනන්‍ය අවශ්‍යතාවන්ට අනුව පුද්ගලාරෝපිත ප්‍රතිකාර සැලසුම් සකස් කරමු.
-                    </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-                            <div>
-                                <strong data-si="සුදුසුකම් ලත්" data-en="Qualified">සුදුසුකම් ලත්</strong>
-                                <span data-si="වෘත්තීය සුදුසුකම් සහ සහතික" data-en="Professional qualifications & certifications">වෘත්තීය සුදුසුකම් සහ සහතික</span>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-child"></i></div>
-                            <div>
-                                <strong data-si="ළමා-කේන්ද්‍රීය" data-en="Child-Centered">ළමා-කේන්ද්‍රීය</strong>
-                                <span data-si="දරුවාගේ අවශ්‍යතා මූලික කරගත් ප්‍රවේශය" data-en="Approach based on child's needs">දරුවාගේ අවශ්‍යතා මූලික කරගත් ප්‍රවේශය</span>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-users"></i></div>
-                            <div>
-                                <strong data-si="පවුල් සහය" data-en="Family Support">පවුල් සහය</strong>
-                                <span data-si="දෙමාපියන්ට මග පෙන්වීම සහ සහාය" data-en="Guidance and support for parents">දෙමාපියන්ට මග පෙන්වීම සහ සහාය</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SERVICES SECTION ========== -->
-    <section id="services" class="section services-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-si="අපගේ සේවා" data-en="Our Services">අපගේ සේවා</span>
-                <h2 class="section-title" data-si="අපි ලබා දෙන විශේෂඥ සේවාවන්" data-en="Expert Services We Offer">අපි ලබා දෙන විශේෂඥ සේවාවන්</h2>
-                <div class="section-line"></div>
-                <p class="section-desc" data-si="සෑම දරුවෙකුම අනන්‍යයි. ඔබේ දරුවාගේ විශේෂිත අවශ්‍යතාවන්ට ගැළපෙන පුද්ගලාරෝපිත චිකිත්සක සේවාවන් අපි ලබා දෙමු." data-en="Every child is unique. We provide personalized therapeutic services tailored to your child's specific needs.">
-                    සෑම දරුවෙකුම අනන්‍යයි. ඔබේ දරුවාගේ විශේෂිත අවශ්‍යතාවන්ට ගැළපෙන පුද්ගලාරෝපිත චිකිත්සක සේවාවන් අපි ලබා දෙමු.
-                </p>
-            </div>
-            <div class="services-grid">
-                <!-- Speech Therapy -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon-wrap speech-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="service-title" data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</h3>
-                    <p class="service-desc" data-si="ඔබේ දරුවාගේ කථන හා භාෂා හැකියාව වර්ධනය කිරීමට අපි උදව් කරමු. ප්‍රමාද කථනය, උච්ඡාරණ ගැටලු, අපේක්ෂාකෘත භාෂා ආබාධ, සහ සන්නිවේදන අපහසුතා සඳහා විශේෂ ප්‍රතිකාර." data-en="We help develop your child's speech and language abilities. Specialized treatment for delayed speech, articulation issues, language disorders, and communication difficulties.">
-                        ඔබේ දරුවාගේ කථන හා භාෂා හැකියාව වර්ධනය කිරීමට අපි උදව් කරමු. ප්‍රමාද කථනය, උච්ඡාරණ ගැටලු, අපේක්ෂාකෘත භාෂා ආබාධ, සහ සන්නිවේදන අපහසුතා සඳහා විශේෂ ප්‍රතිකාර.
-                    </p>
-                    <ul class="service-benefits">
-                        <li data-si="✓ උච්ඡාරණ පුහුණුව" data-en="✓ Articulation training">✓ උච්ඡාරණ පුහුණුව</li>
-                        <li data-si="✓ භාෂා වර්ධන ක්‍රියාකාරකම්" data-en="✓ Language development activities">✓ භාෂා වර්ධන ක්‍රියාකාරකම්</li>
-                        <li data-si="✓ සන්නිවේදන කුසලතා වැඩිදියුණු කිරීම" data-en="✓ Communication skills improvement">✓ සන්නිවේදන කුසලතා වැඩිදියුණු කිරීම</li>
-                        <li data-si="✓ මුඛ මෝටර් ව්‍යායාම" data-en="✓ Oral motor exercises">✓ මුඛ මෝටර් ව්‍යායාම</li>
-                    </ul>
-                    <button class="btn btn-service" onclick="openAppointmentModal()" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book Appointment">හමුවීමක් වෙන්කරන්න</button>
-                </div>
-
-                <!-- Occupational Therapy -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon-wrap ot-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3 class="service-title" data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</h3>
-                    <p class="service-desc" data-si="දරුවාගේ දෛනික ජීවිතයේ ක්‍රියාකාරිත්වය වැඩිදියුණු කිරීමට උපකාරී වන සූක්ෂ්ම මෝටර් කුසලතා, සංවේදී ඒකාබද්ධතා සහ ස්වයං-සත්කාර හැකියාවන් වර්ධනය කිරීම." data-en="Developing fine motor skills, sensory integration, and self-care abilities that help improve the child's daily life functioning.">
-                        දරුවාගේ දෛනික ජීවිතයේ ක්‍රියාකාරිත්වය වැඩිදියුණු කිරීමට උපකාරී වන සූක්ෂ්ම මෝටර් කුසලතා, සංවේදී ඒකාබද්ධතා සහ ස්වයං-සත්කාර හැකියාවන් වර්ධනය කිරීම.
-                    </p>
-                    <ul class="service-benefits">
-                        <li data-si="✓ සූක්ෂ්ම මෝටර් කුසලතා" data-en="✓ Fine motor skills">✓ සූක්ෂ්ම මෝටර් කුසලතා</li>
-                        <li data-si="✓ සංවේදී ඒකාබද්ධතා" data-en="✓ Sensory integration">✓ සංවේදී ඒකාබද්ධතා</li>
-                        <li data-si="✓ ස්වයං-සත්කාර පුහුණුව" data-en="✓ Self-care training">✓ ස්වයං-සත්කාර පුහුණුව</li>
-                        <li data-si="✓ අත් ලිවීමේ හැකියා වර්ධනය" data-en="✓ Handwriting skills development">✓ අත් ලිවීමේ හැකියා වර්ධනය</li>
-                    </ul>
-                    <button class="btn btn-service" onclick="openAppointmentModal()" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book Appointment">හමුවීමක් වෙන්කරන්න</button>
-                </div>
-
-                <!-- Educational Therapy -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon-wrap edu-icon">
-                        <i class="fas fa-book-open-reader"></i>
-                    </div>
-                    <h3 class="service-title" data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</h3>
-                    <p class="service-desc" data-si="ඉගෙනීමේ අපහසුතා ඇති දරුවන්ට කියවීම, ලිවීම සහ ගණිත හැකියාවන් වර්ධනය කිරීමට සහ ඔවුන්ගේ අධ්‍යාපනික සාර්ථකත්වය ළඟා කර ගැනීමට සහාය වීම." data-en="Supporting children with learning difficulties to develop reading, writing, and mathematical skills, and achieve academic success.">
-                        ඉගෙනීමේ අපහසුතා ඇති දරුවන්ට කියවීම, ලිවීම සහ ගණිත හැකියාවන් වර්ධනය කිරීමට සහ ඔවුන්ගේ අධ්‍යාපනික සාර්ථකත්වය ළඟා කර ගැනීමට සහාය වීම.
-                    </p>
-                    <ul class="service-benefits">
-                        <li data-si="✓ කියවීමේ හා ලිවීමේ පුහුණුව" data-en="✓ Reading & writing training">✓ කියවීමේ හා ලිවීමේ පුහුණුව</li>
-                        <li data-si="✓ ගණිත කුසලතා වර්ධනය" data-en="✓ Math skills development">✓ ගණිත කුසලතා වර්ධනය</li>
-                        <li data-si="✓ අවධානය සහ මතකය වැඩිදියුණු කිරීම" data-en="✓ Attention & memory improvement">✓ අවධානය සහ මතකය වැඩිදියුණු කිරීම</li>
-                        <li data-si="✓ විශේෂ අධ්‍යාපනික සැලසුම්" data-en="✓ Special education plans">✓ විශේෂ අධ්‍යාපනික සැලසුම්</li>
-                    </ul>
-                    <button class="btn btn-service" onclick="openAppointmentModal()" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book Appointment">හමුවීමක් වෙන්කරන්න</button>
-                </div>
-
-                <!-- Behavioral Therapy -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon-wrap behav-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="service-title" data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioral Therapy">චර්යාත්මක චිකිත්සාව</h3>
-                    <p class="service-desc" data-si="දරුවාගේ හැසිරීම් ගැටලු විසඳීමට, සමාජ කුසලතා වර්ධනය කිරීමට සහ ධනාත්මක හැසිරීම් රටා ඇති කිරීමට විද්‍යාත්මක ක්‍රමවේද භාවිතයෙන් ප්‍රතිකාර." data-en="Treatment using scientific methods to resolve behavioral issues, develop social skills, and establish positive behavior patterns.">
-                        දරුවාගේ හැසිරීම් ගැටලු විසඳීමට, සමාජ කුසලතා වර්ධනය කිරීමට සහ ධනාත්මක හැසිරීම් රටා ඇති කිරීමට විද්‍යාත්මක ක්‍රමවේද භාවිතයෙන් ප්‍රතිකාර.
-                    </p>
-                    <ul class="service-benefits">
-                        <li data-si="✓ හැසිරීම් කළමනාකරණය" data-en="✓ Behavior management">✓ හැසිරීම් කළමනාකරණය</li>
-                        <li data-si="✓ සමාජ කුසලතා පුහුණුව" data-en="✓ Social skills training">✓ සමාජ කුසලතා පුහුණුව</li>
-                        <li data-si="✓ ABA ප්‍රතිකාර ක්‍රම" data-en="✓ ABA therapy methods">✓ ABA ප්‍රතිකාර ක්‍රම</li>
-                        <li data-si="✓ හැඟීම් කළමනාකරණය" data-en="✓ Emotional regulation">✓ හැඟීම් කළමනාකරණය</li>
-                    </ul>
-                    <button class="btn btn-service" onclick="openAppointmentModal()" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book Appointment">හමුවීමක් වෙන්කරන්න</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== BLOG / RESOURCES SECTION ========== -->
-    <section id="blog" class="section blog-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-si="දෙමාපිය මාර්ගෝපදේශ" data-en="Parenting Resources">දෙමාපිය මාර්ගෝපදේශ</span>
-                <h2 class="section-title" data-si="දෙමාපියන් සඳහා ප්‍රයෝජනවත් ලිපි" data-en="Useful Articles for Parents">දෙමාපියන් සඳහා ප්‍රයෝජනවත් ලිපි</h2>
-                <div class="section-line"></div>
-                <p class="section-desc" data-si="ඔබේ දරුවාගේ වර්ධනයට සහාය වීම සඳහා ප්‍රායෝගික උපදෙස්, ක්‍රියාකාරකම් සහ මග පෙන්වීම්" data-en="Practical tips, activities, and guidance to support your child's development">
-                    ඔබේ දරුවාගේ වර්ධනයට සහාය වීම සඳහා ප්‍රායෝගික උපදෙස්, ක්‍රියාකාරකම් සහ මග පෙන්වීම්
-                </p>
-            </div>
-            <div class="blog-grid" id="blogGrid">
-                <!-- Blog posts loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== TESTIMONIALS SECTION ========== -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-si="පාරිභෝගික අදහස්" data-en="Testimonials">පාරිභෝගික අදහස්</span>
-                <h2 class="section-title" data-si="දෙමාපියන් පවසන දේ" data-en="What Parents Say">දෙමාපියන් පවසන දේ</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonials-track" id="testimonialsTrack">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-si="මගේ දරුවාට කථනයේ ප්‍රමාදයක් තිබුණා. NurtureLink හි චිකිත්සාව ආරම්භ කළ පසු මාස 6ක් ඇතුළත විශාල දියුණුවක් දැක්කා. චතුරිකා මහත්මිය ඉතාම ඉවසීමෙන් සහ ආදරයෙන් දරුවාට සේවය කරනවා." data-en="My child had a speech delay. After starting therapy at NurtureLink, I saw tremendous improvement within 6 months. Ms. Chathurika serves children with great patience and love.">
-                            "මගේ දරුවාට කථනයේ ප්‍රමාදයක් තිබුණා. NurtureLink හි චිකිත්සාව ආරම්භ කළ පසු මාස 6ක් ඇතුළත විශාල දියුණුවක් දැක්කා. චතුරිකා මහත්මිය ඉතාම ඉවසීමෙන් සහ ආදරයෙන් දරුවාට සේවය කරනවා."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div>
-                                <strong data-si="නිමේෂාගේ අම්මා" data-en="Nimesha's Mother">නිමේෂාගේ අම්මා</strong>
-                                <span data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-si="අපේ පුතාට ADHD හඳුනාගත් පසු අපි බොහොම බියවුණා. නමුත් NurtureLink හි චර්යාත්මක චිකිත්සාව ලබාගත් පසු ඔහුගේ හැසිරීම බොහොම වැඩිදියුණු වුණා. පාසලේ ගුරුවරුන්ද වෙනසක් පෙන්වා දුන්නා." data-en="We were very scared after our son was diagnosed with ADHD. But after receiving behavioral therapy at NurtureLink, his behavior improved greatly. Even school teachers noticed the difference.">
-                            "අපේ පුතාට ADHD හඳුනාගත් පසු අපි බොහොම බියවුණා. නමුත් NurtureLink හි චර්යාත්මක චිකිත්සාව ලබාගත් පසු ඔහුගේ හැසිරීම බොහොම වැඩිදියුණු වුණා. පාසලේ ගුරුවරුන්ද වෙනසක් පෙන්වා දුන්නා."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div>
-                                <strong data-si="කවිශ්ගේ තාත්තා" data-en="Kavish's Father">කවිශ්ගේ තාත්තා</strong>
-                                <span data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioral Therapy">චර්යාත්මක චිකිත්සාව</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-si="මගේ දුවට ඉගෙනීමේ අපහසුතාවක් තිබුණා. අධ්‍යාපනික චිකිත්සාවෙන් පසු ඇයගේ කියවීමේ හා ලිවීමේ හැකියාව සැලකිය යුතු ලෙස වැඩිදියුණු වුණා. NurtureLink ආයතනයට ස්තූතියි!" data-en="My daughter had a learning difficulty. After educational therapy, her reading and writing abilities improved significantly. Thank you NurtureLink!">
-                            "මගේ දුවට ඉගෙනීමේ අපහසුතාවක් තිබුණා. අධ්‍යාපනික චිකිත්සාවෙන් පසු ඇයගේ කියවීමේ හා ලිවීමේ හැකියාව සැලකිය යුතු ලෙස වැඩිදියුණු වුණා. NurtureLink ආයතනයට ස්තූතියි!"
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div>
-                                <strong data-si="සෙනුලිගේ අම්මා" data-en="Senuli's Mother">සෙනුලිගේ අම්මා</strong>
-                                <span data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 4 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-si="වෘත්තීය චිකිත්සාව හරහා මගේ දරුවාගේ සූක්ෂ්ම මෝටර් කුසලතා බොහොම වැඩිදියුණු වුණා. දැන් ඔහුට තනියම ඇඳුම් ඇඳ ගැනීමත්, පැන්සලෙන් ලිවීමත් හොඳින් කරන්න පුළුවන්." data-en="Through occupational therapy, my child's fine motor skills improved greatly. Now he can dress himself and write with a pencil well on his own.">
-                            "වෘත්තීය චිකිත්සාව හරහා මගේ දරුවාගේ සූක්ෂ්ම මෝටර් කුසලතා බොහොම වැඩිදියුණු වුණා. දැන් ඔහුට තනියම ඇඳුම් ඇඳ ගැනීමත්, පැන්සලෙන් ලිවීමත් හොඳින් කරන්න පුළුවන්."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div>
-                                <strong data-si="දිනිත්ගේ අම්මා" data-en="Dinith's Mother">දිනිත්ගේ අම්මා</strong>
-                                <span data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-nav">
-                    <button class="test-nav-btn" onclick="slideTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="test-dots" id="testDots"></div>
-                    <button class="test-nav-btn" onclick="slideTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT SECTION ========== -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-si="සම්බන්ධ වන්න" data-en="Contact Us">සම්බන්ධ වන්න</span>
-                <h2 class="section-title" data-si="අප හා සම්බන්ධ වන්න" data-en="Get in Touch">අප හා සම්බන්ධ වන්න</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info-col">
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <h4 data-si="දුරකථනය" data-en="Phone">දුරකථනය</h4>
-                            <a href="tel:+94762885352">+94 76 288 5352</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <a href="https://wa.me/94762885352" target="_blank" data-si="WhatsApp හරහා සම්බන්ධ වන්න" data-en="Connect via WhatsApp">WhatsApp හරහා සම්බන්ධ වන්න</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h4 data-si="ලිපිනය" data-en="Address">ලිපිනය</h4>
-                            <p data-si="NurtureLink Mind Wellness, ශ්‍රී ලංකාව" data-en="NurtureLink Mind Wellness, Sri Lanka">NurtureLink Mind Wellness, ශ්‍රී ලංකාව</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <div>
-                            <h4 data-si="විවෘත වේලාවන්" data-en="Opening Hours">විවෘත වේලාවන්</h4>
-                            <p data-si="සඳුදා - සෙනසුරාදා: පෙ.ව. 8:00 - ප.ව. 6:00" data-en="Monday - Saturday: 8:00 AM - 6:00 PM">සඳුදා - සෙනසුරාදා: පෙ.ව. 8:00 - ප.ව. 6:00</p>
-                            <p data-si="ඉරිදා: වසා ඇත" data-en="Sunday: Closed">ඉරිදා: වසා ඇත</p>
-                        </div>
-                    </div>
-
-                    <!-- WhatsApp CTA -->
-                    <a href="https://wa.me/94762885352?text=Hello%20NurtureLink%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="whatsapp-cta">
-                        <i class="fab fa-whatsapp"></i>
-                        <span data-si="WhatsApp හරහා කතා කරන්න" data-en="Chat on WhatsApp">WhatsApp හරහා කතා කරන්න</span>
-                    </a>
-                </div>
-                <div class="contact-form-col">
-                    <form id="contactForm" class="contact-form">
-                        <h3 data-si="අපට පණිවිඩයක් යවන්න" data-en="Send Us a Message">අපට පණිවිඩයක් යවන්න</h3>
-                        <div class="form-group">
-                            <input type="text" name="name" required>
-                            <label data-si="ඔබේ නම" data-en="Your Name">ඔබේ නම</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" required>
-                            <label data-si="විද්‍යුත් තැපෑල" data-en="Email Address">විද්‍යුත් තැපෑල</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" required>
-                            <label data-si="දුරකථන අංකය" data-en="Phone Number">දුරකථන අංකය</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="4" required></textarea>
-                            <label data-si="ඔබේ පණිවිඩය" data-en="Your Message">ඔබේ පණිවිඩය</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" data-si="📩 පණිවිඩය යවන්න" data-en="📩 Send Message">📩 පණිවිඩය යවන්න</button>
-                    </form>
-                </div>
-            </div>
-            <!-- Google Map -->
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.46340846!2d79.68383754687498!3d6.921833600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="images/logo.jpg" alt="NurtureLink Logo" class="footer-logo">
-                    <p data-si="NurtureLink Mind Wellness - ඔබේ දරුවාගේ මානසික, චර්යාත්මක සහ අධ්‍යාපනික වර්ධනය සඳහා විශ්වාසනීය හවුල්කරු." data-en="NurtureLink Mind Wellness - Your trusted partner for your child's mental, behavioral, and educational development.">
-                        NurtureLink Mind Wellness - ඔබේ දරුවාගේ මානසික, චර්යාත්මක සහ අධ්‍යාපනික වර්ධනය සඳහා විශ්වාසනීය හවුල්කරු.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-si="ඉක්මන් සබැඳි" data-en="Quick Links">ඉක්මන් සබැඳි</h4>
-                    <ul>
-                        <li><a href="#home" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a></li>
-                        <li><a href="#about" data-si="අප ගැන" data-en="About Us">අප ගැන</a></li>
-                        <li><a href="#services" data-si="සේවා" data-en="Services">සේවා</a></li>
-                        <li><a href="#contact" data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-si="සේවාවන්" data-en="Services">සේවාවන්</h4>
-                    <ul>
-                        <li><a href="#services" data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</a></li>
-                        <li><a href="#services" data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</a></li>
-                        <li><a href="#services" data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</a></li>
-                        <li><a href="#services" data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioral Therapy">චර්යාත්මක චිකිත්සාව</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</h4>
-                    <p><i class="fas fa-phone"></i> +94 76 288 5352</p>
-                    <p><i class="fab fa-whatsapp"></i> WhatsApp</p>
-                    <div class="footer-social">
-                        <a href="https://wa.me/94762885352" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 NurtureLink Mind Wellness. <span data-si="සියලු හිමිකම් ඇවිරිණි." data-en="All rights reserved.">සියලු හිමිකම් ඇවිරිණි.</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ========== APPOINTMENT MODAL ========== -->
-    <div class="modal-overlay" id="appointmentModal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeAppointmentModal()"><i class="fas fa-times"></i></button>
-            <div class="modal-header">
-                <img src="images/logo.jpg" alt="Logo" class="modal-logo">
-                <h2 data-si="හමුවීමක් වෙන්කරවා ගන්න" data-en="Book an Appointment">හමුවීමක් වෙන්කරවා ගන්න</h2>
-                <p data-si="පහත තොරතුරු පුරවා ඔබේ හමුවීම වෙන්කරවා ගන්න" data-en="Fill in the details below to book your appointment">පහත තොරතුරු පුරවා ඔබේ හමුවීම වෙන්කරවා ගන්න</p>
-            </div>
-            <form id="appointmentForm" class="appointment-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" name="parentName" required>
-                        <label data-si="දෙමාපිය නම" data-en="Parent's Name">දෙමාපිය නම</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" required>
-                        <label data-si="දුරකථන අංකය" data-en="Phone Number">දුරකථන අංකය</label>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" name="childName" required>
-                        <label data-si="දරුවාගේ නම" data-en="Child's Name">දරුවාගේ නම</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="childAge" min="0" max="18" required>
-                        <label data-si="දරුවාගේ වයස" data-en="Child's Age">දරුවාගේ වයස</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <select name="service" required>
-                        <option value="" disabled selected></option>
-                        <option value="speech" data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</option>
-                        <option value="occupational" data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</option>
-                        <option value="educational" data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</option>
-                        <option value="behavioral" data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioral Therapy">චර්යාත්මක චිකිත්සාව</option>
-                    </select>
-                    <label data-si="සේවාව තෝරන්න" data-en="Select Service">සේවාව තෝරන්න</label>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="date" name="date" required>
-                        <label class="date-label" data-si="කැමති දිනය" data-en="Preferred Date">කැමති දිනය</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="time" name="time" required>
-                        <label class="date-label" data-si="කැමති වේලාව" data-en="Preferred Time">කැමති වේලාව</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea name="notes" rows="3"></textarea>
-                    <label data-si="අමතර සටහන් (විකල්ප)" data-en="Additional Notes (optional)">අමතර සටහන් (විකල්ප)</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block" data-si="📅 හමුවීම තහවුරු කරන්න" data-en="📅 Confirm Appointment">📅 හමුවීම තහවුරු කරන්න</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/94762885352?text=Hello%20NurtureLink%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Nurturelink home">
+      <span class="brand-mark"><img src="assets/logo.png" alt="Nurturelink logo" /></span>
+      <span><strong>NURTURELINK</strong><small>MIND WELLNESS</small></span>
     </a>
-
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <div class="toast-content">
-            <i class="fas fa-check-circle toast-icon"></i>
-            <span id="toastMessage"></span>
-        </div>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#home" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a>
+      <a href="#about" data-si="අප ගැන" data-en="About">අප ගැන</a>
+      <a href="#services" data-si="සේවා" data-en="Services">සේවා</a>
+      <a href="#resources" data-si="මාර්ගෝපදේශ" data-en="Resources">මාර්ගෝපදේශ</a>
+      <a href="#contact" data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language"><span class="active">සිං</span><span>EN</span></button>
+      <a class="button button-small" href="#appointment" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book a visit">හමුවීමක් වෙන්කරන්න</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
     </div>
+  </header>
 
-    <script src="js/main.js"></script>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" data-si="දරුවාට අවශ්‍ය සහාය • පවුලට අවශ්‍ය මඟපෙන්වීම" data-en="The right support for your child • Guidance for your family">දරුවාට අවශ්‍ය සහාය • පවුලට අවශ්‍ය මඟපෙන්වීම</span>
+        <h1 data-si="ඔබේ දරුවාගේ <em>වර්ධනය</em> ගැන ඔබට ගැටලු තිබේද?" data-en="Concerned about your child’s <em>development?</em>">ඔබේ දරුවාගේ <em>වර්ධනය</em> ගැන ඔබට ගැටලු තිබේද?</h1>
+        <p data-si="මානසික, චර්යාත්මක, කථන හෝ අධ්‍යාපනික අභියෝග සඳහා — අවබෝධයෙන්, විශ්වාසයෙන් සහ වෘත්තීය පළපුරුද්දෙන් ඔබ සමඟ සිටිමු." data-en="For emotional, behavioural, speech or learning challenges — we are beside you with understanding, trust and professional experience.">මානසික, චර්යාත්මක, කථන හෝ අධ්‍යාපනික අභියෝග සඳහා — අවබෝධයෙන්, විශ්වාසයෙන් සහ වෘත්තීය පළපුරුද්දෙන් ඔබ සමඟ සිටිමු.</p>
+        <div class="hero-actions">
+          <a class="button" href="#appointment"><span data-si="හමුවීමක් වෙන්කරන්න" data-en="Book an appointment">හමුවීමක් වෙන්කරන්න</span><b>→</b></a>
+          <a class="text-link" href="tel:+94762885352"><span class="phone-icon">☎</span><span><small data-si="අදම කතා කරන්න" data-en="Call us today">අදම කතා කරන්න</small><strong>+94 76 288 5352</strong></span></a>
+        </div>
+        <div class="trust-row">
+          <div class="avatars"><span>🌱</span><span>💛</span><span>🧩</span></div>
+          <p><strong data-si="වසර 12+ පළපුරුද්ද" data-en="12+ years of experience">වසර 12+ පළපුරුද්ද</strong><br><span data-si="දරුවන් හා පවුල් සඳහා කැපවූ සත්කාරය" data-en="Dedicated care for children & families">දරුවන් හා පවුල් සඳහා කැපවූ සත්කාරය</span></p>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="rainbow-card">
+          <span class="spark s1">✦</span><span class="spark s2">✦</span>
+          <div class="arch a1"></div><div class="arch a2"></div><div class="arch a3"></div><div class="arch a4"></div>
+          <div class="sun">☺</div>
+          <div class="cloud c1"></div><div class="cloud c2"></div>
+          <div class="hero-logo"><img src="assets/logo.png" alt="Nurturelink Mind Wellness" /></div>
+        </div>
+        <div class="mini-card card-one"><span>💬</span><div><b data-si="කථන සහාය" data-en="Speech support">කථන සහාය</b><small data-si="සන්නිවේදනය විශ්වාසයෙන්" data-en="Communicate with confidence">සන්නිවේදනය විශ්වාසයෙන්</small></div></div>
+        <div class="mini-card card-two"><span>♡</span><div><b data-si="දරුවා කේන්ද්‍ර කරගත්" data-en="Child-centred">දරුවා කේන්ද්‍ර කරගත්</b><small data-si="මෘදු හා ආරක්ෂිත පරිසරයක්" data-en="A gentle, safe environment">මෘදු හා ආරක්ෂිත පරිසරයක්</small></div></div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Highlights">
+      <div><span>12+</span><p data-si="වසරක වෘත්තීය<br>පළපුරුද්ද" data-en="Years of professional<br>experience">වසරක වෘත්තීය<br>පළපුරුද්ද</p></div>
+      <div><span>04</span><p data-si="විශේෂඥ සේවා<br>එකම තැනකින්" data-en="Specialist services<br>under one roof">විශේෂඥ සේවා<br>එකම තැනකින්</p></div>
+      <div><span>01:01</span><p data-si="පුද්ගලික අවධානය<br>සෑම දරුවෙකුටම" data-en="Personal attention<br>for every child">පුද්ගලික අවධානය<br>සෑම දරුවෙකුටම</p></div>
+      <div><span>සිං | EN</span><p data-si="භාෂා දෙකෙන්ම<br>සහාය" data-en="Support available<br>in two languages">භාෂා දෙකෙන්ම<br>සහාය</p></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-image reveal">
+        <div class="portrait-placeholder"><span>C</span><i></i><i></i><i></i><p>Chathurika Virajani<br>Alwis</p></div>
+        <div class="experience-badge"><strong>12+</strong><span data-si="වසරක<br>පළපුරුද්ද" data-en="Years of<br>experience">වසරක<br>පළපුරුද්ද</span></div>
+      </div>
+      <div class="section-copy reveal">
+        <span class="eyebrow" data-si="අප ගැන" data-en="About us">අප ගැන</span>
+        <h2 data-si="සෑම දරුවෙකුම වෙනස්.<br><em>සෑම දරුවෙකුම වටිනා.</em>" data-en="Every child is different.<br><em>Every child is valued.</em>">සෑම දරුවෙකුම වෙනස්.<br><em>සෑම දරුවෙකුම වටිනා.</em></h2>
+        <p data-si="චතුරිකා විරාජනී අල්විස් මහත්මියගේ වසර 12කට අධික වෘත්තීය පළපුරුද්ද සමඟ Nurturelink Mind Wellness, දරුවන්ගේ හැකියාවන් හඳුනාගෙන ඒවා මෘදු ලෙස වර්ධනය කිරීමට පවුල් සමඟ එක්ව ක්‍රියා කරයි." data-en="With over 12 years of professional experience, Chathurika Virajani Alwis and Nurturelink Mind Wellness work alongside families to recognise each child’s strengths and nurture their development with care.">චතුරිකා විරාජනී අල්විස් මහත්මියගේ වසර 12කට අධික වෘත්තීය පළපුරුද්ද සමඟ Nurturelink Mind Wellness, දරුවන්ගේ හැකියාවන් හඳුනාගෙන ඒවා මෘදු ලෙස වර්ධනය කිරීමට පවුල් සමඟ එක්ව ක්‍රියා කරයි.</p>
+        <div class="qualifications">
+          <h3 data-si="වෘත්තීය සුදුසුකම්" data-en="Professional qualifications">වෘත්තීය සුදුසුකම්</h3>
+          <div class="qualification-grid">
+            <p data-si="ළමා හා විශේෂ අවශ්‍යතා අධ්‍යාපන උපදේශක සහ මනෝචිකිත්සක" data-en="Counsellor & Psychotherapist — Child & Special Needs Education">ළමා හා විශේෂ අවශ්‍යතා අධ්‍යාපන උපදේශක සහ මනෝචිකිත්සක</p>
+            <p data-si="මනෝවිද්‍යාව හා උපදේශනය පිළිබඳ ඩිප්ලෝමාව — IMBS" data-en="Diploma in Psychology & Counselling — IMBS">මනෝවිද්‍යාව හා උපදේශනය පිළිබඳ ඩිප්ලෝමාව — IMBS</p>
+            <p data-si="ඉගෙනුම් ආබාධ පිළිබඳ ඩිප්ලෝමාව — විවෘත විශ්වවිද්‍යාලය" data-en="Diploma in Learning Disability — Open University">ඉගෙනුම් ආබාධ පිළිබඳ ඩිප්ලෝමාව — විවෘත විශ්වවිද්‍යාලය</p>
+            <p data-si="විශේෂ අවශ්‍යතා අධ්‍යාපනය හා මුල් ළමාවිය සංවර්ධනය — පෙර පාසල් ගුරු NVQ 4" data-en="Special Needs Education & Early Childhood Development — Pre-School Teacher, NVQ Level 4">විශේෂ අවශ්‍යතා අධ්‍යාපනය හා මුල් ළමාවිය සංවර්ධනය — පෙර පාසල් ගුරු NVQ 4</p>
+            <p data-si="උපදේශක සහ මනෝචිකිත්සක — AMIPC" data-en="Counsellor & Psychotherapist — AMIPC">උපදේශක සහ මනෝචිකිත්සක — AMIPC</p>
+            <p data-si="මනෝවිද්‍යාව පිළිබඳ ගෞරව උපාධිය — කැලණිය විශ්වවිද්‍යාලය" data-en="B.A. (Hons) Psychology — University of Kelaniya">මනෝවිද්‍යාව පිළිබඳ ගෞරව උපාධිය — කැලණිය විශ්වවිද්‍යාලය</p>
+            <p data-si="බෞද්ධ උපදේශනය පිළිබඳ ශාස්ත්‍රපති උපාධිය — PGIPBS" data-en="M.A. Buddhist Counselling — PGIPBS">බෞද්ධ උපදේශනය පිළිබඳ ශාස්ත්‍රපති උපාධිය — PGIPBS</p>
+          </div>
+        </div>
+        <ul class="checks">
+          <li data-si="දරුවාගේ අවශ්‍යතාවයට ගැලපෙන පුද්ගලික සැලැස්මක්" data-en="An individual plan shaped around your child’s needs">දරුවාගේ අවශ්‍යතාවයට ගැලපෙන පුද්ගලික සැලැස්මක්</li>
+          <li data-si="දෙමාපියන් සමඟ පැහැදිලි හා ගෞරවනීය සන්නිවේදනය" data-en="Clear, respectful communication with parents">දෙමාපියන් සමඟ පැහැදිලි හා ගෞරවනීය සන්නිවේදනය</li>
+          <li data-si="ආරක්ෂිත, සතුටුදායක හා දරුවා කේන්ද්‍ර කරගත් පරිසරයක්" data-en="A safe, joyful and child-centred environment">ආරක්ෂිත, සතුටුදායක හා දරුවා කේන්ද්‍ර කරගත් පරිසරයක්</li>
+        </ul>
+        <a href="#contact" class="arrow-link" data-si="අපව හඳුනාගන්න →" data-en="Get to know us →">අපව හඳුනාගන්න →</a>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow" data-si="අපගේ සේවා" data-en="Our services">අපගේ සේවා</span><h2 data-si="පුංචි පියවර.<br><em>විශාල වෙනසක්.</em>" data-en="Small steps.<br><em>A meaningful difference.</em>">පුංචි පියවර.<br><em>විශාල වෙනසක්.</em></h2></div>
+        <p data-si="ක්‍රීඩාමය, වයසට ගැලපෙන ක්‍රියාකාරකම් මගින් දරුවාගේ දෛනික ජීවිතයට අර්ථවත් ප්‍රගතියක් ගෙන එමු." data-en="Through playful, age-appropriate activities, we help children make meaningful progress in everyday life.">ක්‍රීඩාමය, වයසට ගැලපෙන ක්‍රියාකාරකම් මගින් දරුවාගේ දෛනික ජීවිතයට අර්ථවත් ප්‍රගතියක් ගෙන එමු.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card coral reveal"><div class="service-icon">💬</div><span>01</span><h3 data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</h3><p data-si="වචන උච්චාරණය, භාෂා අවබෝධය සහ විශ්වාසයෙන් සන්නිවේදනය කිරීමට සහාය." data-en="Support for pronunciation, language understanding and confident communication.">වචන උච්චාරණය, භාෂා අවබෝධය සහ විශ්වාසයෙන් සන්නිවේදනය කිරීමට සහාය.</p><button class="service-more" data-service="speech" data-si="ප්‍රතිලාභ බලන්න ↗" data-en="View benefits ↗">ප්‍රතිලාභ බලන්න ↗</button></article>
+        <article class="service-card teal reveal"><div class="service-icon">✋</div><span>02</span><h3 data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</h3><p data-si="සියුම් චාලක කුසලතා, සංවේදී සැකසුම සහ දෛනික ස්වාධීනත්වය වර්ධනයට." data-en="Develop fine motor skills, sensory processing and everyday independence.">සියුම් චාලක කුසලතා, සංවේදී සැකසුම සහ දෛනික ස්වාධීනත්වය වර්ධනයට.</p><button class="service-more" data-service="occupational" data-si="ප්‍රතිලාභ බලන්න ↗" data-en="View benefits ↗">ප්‍රතිලාභ බලන්න ↗</button></article>
+        <article class="service-card yellow reveal"><div class="service-icon">✎</div><span>03</span><h3 data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</h3><p data-si="කියවීම, ලිවීම, අවධානය සහ ඉගෙනීමේ ක්‍රම දරුවාට ගැලපෙන ලෙස ශක්තිමත් කිරීම." data-en="Strengthen reading, writing, attention and learning strategies in ways that suit the child.">කියවීම, ලිවීම, අවධානය සහ ඉගෙනීමේ ක්‍රම දරුවාට ගැලපෙන ලෙස ශක්තිමත් කිරීම.</p><button class="service-more" data-service="education" data-si="ප්‍රතිලාභ බලන්න ↗" data-en="View benefits ↗">ප්‍රතිලාභ බලන්න ↗</button></article>
+        <article class="service-card plum reveal"><div class="service-icon">♡</div><span>04</span><h3 data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioural Therapy">චර්යාත්මක චිකිත්සාව</h3><p data-si="හැඟීම් හඳුනාගැනීම, ස්වයං පාලනය සහ ධනාත්මක හැසිරීම් ගොඩනැගීමට සහාය." data-en="Support for recognising emotions, self-regulation and building positive behaviour.">හැඟීම් හඳුනාගැනීම, ස්වයං පාලනය සහ ධනාත්මක හැසිරීම් ගොඩනැගීමට සහාය.</p><button class="service-more" data-service="behaviour" data-si="ප්‍රතිලාභ බලන්න ↗" data-en="View benefits ↗">ප්‍රතිලාභ බලන්න ↗</button></article>
+      </div>
+    </section>
+
+    <section class="section resources" id="resources">
+      <div class="section-heading reveal"><div><span class="eyebrow" data-si="දෙමාපිය මාර්ගෝපදේශ" data-en="Parent resources">දෙමාපිය මාර්ගෝපදේශ</span><h2 data-si="නිවසේදීත් <em>වර්ධනයට සහාය.</em>" data-en="Support growth <em>at home too.</em>">නිවසේදීත් <em>වර්ධනයට සහාය.</em></h2></div><a href="#resources" class="arrow-link" data-si="සියලු ලිපි බලන්න →" data-en="View all articles →">සියලු ලිපි බලන්න →</a></div>
+      <div class="article-grid">
+        <article class="article-card reveal"><div class="article-art art-pink"><span>1·2·3</span><i>★</i></div><small data-si="භාෂා වර්ධනය • මිනිත්තු 5" data-en="Language development • 5 min">භාෂා වර්ධනය • මිනිත්තු 5</small><h3 data-si="දරුවා සමඟ දිනපතා කතා කිරීමට සරල ක්‍රම 5ක්" data-en="5 simple ways to talk with your child every day">දරුවා සමඟ දිනපතා කතා කිරීමට සරල ක්‍රම 5ක්</h3><a href="#contact" data-si="කියවන්න →" data-en="Read more →">කියවන්න →</a></article>
+        <article class="article-card reveal"><div class="article-art art-blue"><span>☁</span><i>☺</i></div><small data-si="චර්යාව • මිනිත්තු 7" data-en="Behaviour • 7 min">චර්යාව • මිනිත්තු 7</small><h3 data-si="දරුවාගේ තද හැඟීම් මෘදු ලෙස පාලනය කරමු" data-en="Helping your child manage big feelings gently">දරුවාගේ තද හැඟීම් මෘදු ලෙස පාලනය කරමු</h3><a href="#contact" data-si="කියවන්න →" data-en="Read more →">කියවන්න →</a></article>
+        <article class="article-card reveal"><div class="article-art art-yellow"><span>ABC</span><i>✎</i></div><small data-si="ඉගෙනීම • මිනිත්තු 6" data-en="Learning • 6 min">ඉගෙනීම • මිනිත්තු 6</small><h3 data-si="ඉගෙනීම සතුටක් කරන නිවසේ ක්‍රියාකාරකම්" data-en="At-home activities that make learning joyful">ඉගෙනීම සතුටක් කරන නිවසේ ක්‍රියාකාරකම්</h3><a href="#contact" data-si="කියවන්න →" data-en="Read more →">කියවන්න →</a></article>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="quote-mark">“</div>
+      <div class="testimonial-copy reveal">
+        <span class="eyebrow light" data-si="දෙමාපිය අදහස්" data-en="Parent stories">දෙමාපිය අදහස්</span>
+        <blockquote id="quote" data-si="“අපේ දරුවා දැන් තම අවශ්‍යතා වචන වලින් කියන්න පටන් අරන්. අපටත් ඔහුව තේරුම් ගන්න මඟ පෙන්වූ ආකාරයට බොහොම ස්තූතියි.”" data-en="“Our child has started expressing his needs in words. We are deeply grateful for the way you also guided us to understand him.”">“අපේ දරුවා දැන් තම අවශ්‍යතා වචන වලින් කියන්න පටන් අරන්. අපටත් ඔහුව තේරුම් ගන්න මඟ පෙන්වූ ආකාරයට බොහොම ස්තූතියි.”</blockquote>
+        <p><strong data-si="දෙමාපියෙකුගේ අදහස" data-en="A parent’s feedback">දෙමාපියෙකුගේ අදහස</strong><small data-si="පෞද්ගලිකත්වය සඳහා නම සඟවා ඇත" data-en="Name withheld for privacy">පෞද්ගලිකත්වය සඳහා නම සඟවා ඇත</small></p>
+        <div class="dots"><button class="active" aria-label="Testimonial 1"></button><button aria-label="Testimonial 2"></button><button aria-label="Testimonial 3"></button></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-info reveal">
+        <span class="eyebrow" data-si="සම්බන්ධ වන්න" data-en="Contact us">සම්බන්ධ වන්න</span>
+        <h2 data-si="අපි කතා කරමු.<br><em>ඔබ තනිවම නොවේ.</em>" data-en="Let’s talk.<br><em>You are not alone.</em>">අපි කතා කරමු.<br><em>ඔබ තනිවම නොවේ.</em></h2>
+        <p data-si="ඔබේ දරුවා ගැන ඇති ප්‍රශ්නයක් හෝ හමුවීමක් සඳහා අපට අමතන්න. ඔබට සවන් දීමට අපි සූදානම්." data-en="Contact us with a question about your child or to arrange a visit. We are ready to listen.">ඔබේ දරුවා ගැන ඇති ප්‍රශ්නයක් හෝ හමුවීමක් සඳහා අපට අමතන්න. ඔබට සවන් දීමට අපි සූදානම්.</p>
+        <div class="contact-list">
+          <a href="tel:+94762885352"><span>☎</span><div><small data-si="දුරකථන" data-en="Phone">දුරකථන</small><strong>+94 76 288 5352</strong></div></a>
+          <a href="https://wa.me/94762885352" target="_blank" rel="noopener"><span>◉</span><div><small>WhatsApp</small><strong data-si="පණිවිඩයක් යවන්න" data-en="Send a message">පණිවිඩයක් යවන්න</strong></div></a>
+          <div><span>⌖</span><div><small data-si="ලිපිනය" data-en="Address">ලිපිනය</small><strong data-si="ලිපිනය තහවුරු කිරීමට අමතන්න" data-en="Call to confirm our location">ලිපිනය තහවුරු කිරීමට අමතන්න</strong></div></div>
+          <div><span>◷</span><div><small data-si="විවෘත වේලාවන්" data-en="Opening hours">විවෘත වේලාවන්</small><strong data-si="හමුවීම් මත — වේලාව තහවුරු කිරීමට අමතන්න" data-en="By appointment — call to confirm a time">හමුවීම් මත — වේලාව තහවුරු කිරීමට අමතන්න</strong></div></div>
+        </div>
+      </div>
+      <form class="appointment-form reveal" id="appointment">
+        <div class="form-head"><span>♡</span><div><h3 data-si="හමුවීමක් ඉල්ලන්න" data-en="Request an appointment">හමුවීමක් ඉල්ලන්න</h3><p data-si="ඔබේ තොරතුරු යොමු කරන්න. අපි ඔබව අමතන්නෙමු." data-en="Send your details and we’ll contact you.">ඔබේ තොරතුරු යොමු කරන්න. අපි ඔබව අමතන්නෙමු.</p></div></div>
+        <label><span data-si="දෙමාපියාගේ නම" data-en="Parent’s name">දෙමාපියාගේ නම</span><input name="name" required placeholder="ඔබේ නම / Your name" /></label>
+        <label><span data-si="දුරකථන අංකය" data-en="Phone number">දුරකථන අංකය</span><input name="phone" required inputmode="tel" placeholder="07X XXX XXXX" /></label>
+        <label><span data-si="අවශ්‍ය සේවාව" data-en="Service needed">අවශ්‍ය සේවාව</span><select name="service"><option data-si="සේවාවක් තෝරන්න" data-en="Choose a service">සේවාවක් තෝරන්න</option><option data-si="කථන චිකිත්සාව" data-en="Speech Therapy">කථන චිකිත්සාව</option><option data-si="වෘත්තීය චිකිත්සාව" data-en="Occupational Therapy">වෘත්තීය චිකිත්සාව</option><option data-si="අධ්‍යාපනික චිකිත්සාව" data-en="Educational Therapy">අධ්‍යාපනික චිකිත්සාව</option><option data-si="චර්යාත්මක චිකිත්සාව" data-en="Behavioural Therapy">චර්යාත්මක චිකිත්සාව</option></select></label>
+        <label><span data-si="කෙටි පණිවිඩයක් (විකල්ප)" data-en="Short message (optional)">කෙටි පණිවිඩයක් (විකල්ප)</span><textarea name="message" rows="3" placeholder="How can we help?"></textarea></label>
+        <button class="button submit" type="submit"><span data-si="WhatsApp හරහා ඉල්ලීම යවන්න" data-en="Send request via WhatsApp">WhatsApp හරහා ඉල්ලීම යවන්න</span> <b>→</b></button>
+        <p class="privacy" data-si="ඔබේ තොරතුරු රහසිගතව තබා ගනු ලැබේ." data-en="Your information will be kept confidential.">ඔබේ තොරතුරු රහසිගතව තබා ගනු ලැබේ.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><div class="brand"><span class="brand-mark"><img src="assets/logo.png" alt="" /></span><span><strong>NURTURELINK</strong><small>MIND WELLNESS</small></span></div><p data-si="දරුවාගේ හැකියාවට ඉඩ දෙමු. පවුලේ ගමනට අත්වැලක් වෙමු." data-en="Making room for every child’s potential. Supporting every family’s journey.">දරුවාගේ හැකියාවට ඉඩ දෙමු. පවුලේ ගමනට අත්වැලක් වෙමු.</p></div>
+    <div><h4 data-si="ඉක්මන් සබැඳි" data-en="Quick links">ඉක්මන් සබැඳි</h4><a href="#about" data-si="අප ගැන" data-en="About us">අප ගැන</a><a href="#services" data-si="සේවා" data-en="Services">සේවා</a><a href="#resources" data-si="මාර්ගෝපදේශ" data-en="Resources">මාර්ගෝපදේශ</a></div>
+    <div><h4 data-si="අමතන්න" data-en="Reach us">අමතන්න</h4><a href="tel:+94762885352">+94 76 288 5352</a><a href="https://wa.me/94762885352">WhatsApp</a></div>
+    <p class="copyright">© 2026 Nurturelink Mind Wellness. <span data-si="සියලු හිමිකම් ඇවිරිණි." data-en="All rights reserved.">සියලු හිමිකම් ඇවිරිණි.</span></p>
+  </footer>
+
+  <dialog id="serviceDialog"><button class="dialog-close" aria-label="Close">×</button><div class="dialog-icon">♡</div><h3 id="dialogTitle"></h3><p id="dialogText"></p><ul id="dialogList"></ul><a class="button" href="#appointment" id="dialogBook" data-si="හමුවීමක් වෙන්කරන්න" data-en="Book an appointment">හමුවීමක් වෙන්කරන්න</a></dialog>
+  <a class="whatsapp-float" href="https://wa.me/94762885352" target="_blank" aria-label="Chat on WhatsApp">◉</a>
+  <script src="script.js"></script>
 </body>
 </html>
